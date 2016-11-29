@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="http://usewing.ml/dist/wing.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
     <script>
-      var container = document.getElementById('textarea');
+      var container = document.querySelector('textarea');
       var save = document.getElementById('save');
 
       save.onclick = function() {
@@ -24,9 +24,9 @@
           <span><button OnClick="var myElement = document.querySelector('#textarea');myElement.style.textAlign = 'right';">right align</button></span> 
      </div>   
     <form name="saveme">  
-    <div id="textarea" contenteditable="true">
+    <textarea id="textarea" contenteditable="true">
         <label placeholder="Type Here" name="label">Type Here</label>
-         </div>
+         </textarea>
     </form>
     <input type="button" value="save" id="save">
   </body>
