@@ -7,7 +7,7 @@
       function save() 
 { 
 val = document.saveme.label.value; 
-mydoc = document.open(); 
+mydoc = document.getElementById('textarea'); 
 mydoc.write(val); 
 mydoc.execCommand("saveAs",true,".txt"); //.txt file extension
 history.go(-1);
