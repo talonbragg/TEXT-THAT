@@ -4,14 +4,13 @@
     <link rel="stylesheet" href="http://usewing.ml/dist/wing.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
     <script>
-      function save() 
-{ 
-val = document.saveme.label.value; 
-mydoc = document.getElementById('textarea'); 
-mydoc.write(val); 
-mydoc.execCommand("saveAs",true,".txt"); //.txt file extension
-history.go(-1);
-} 
+      var container = document.getElementById('textarea');
+      var save = document.getElementById('save');
+
+      save.onclick = function() {
+      save.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(container.value);
+      save.download = 'export.pdf';
+};
     </script>
   </head>
   <body>
@@ -29,6 +28,6 @@ history.go(-1);
         <label placeholder="Type Here" name="label">Type Here</label>
          </div>
     </form>
-    <input type="button" onClick="save();" value="save">
+    <input type="button" onClick="save();" value="save" id="save">
   </body>
 <html>
