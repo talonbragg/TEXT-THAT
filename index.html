@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
     <script>
       var container = document.querySelector('textarea');
-      var save = document.getElementById('save');
+      var save = document.querySelector('a');
 
       save.onclick = function() {
       save.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(container.value);
@@ -28,6 +28,6 @@
         <label placeholder="Type Here" name="label">Type Here</label>
          </textarea>
     </form>
-    <input type="button" value="save" id="save">
+    <a type="button" value="save" id="save">SAVE</a>
   </body>
 <html>
