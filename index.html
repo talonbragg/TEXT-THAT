@@ -6,7 +6,7 @@
     <script>
       function save() 
 { 
-val = document.myform.text_area.value; 
+val = document.saveme.label.value; 
 mydoc = document.open(); 
 mydoc.write(val); 
 mydoc.execCommand("saveAs",true,".txt"); //.txt file extension
@@ -24,9 +24,11 @@ history.go(-1);
           <span><button OnClick="var myElement = document.querySelector('#textarea');myElement.style.textAlign = 'center';">center align</button></span> 
           <span><button OnClick="var myElement = document.querySelector('#textarea');myElement.style.textAlign = 'right';">right align</button></span> 
      </div>   
-      <div id="textarea" contenteditable="true">
-        <label placeholder="Type Here">Type Here</label>
+    <form name="saveme">  
+    <div id="textarea" contenteditable="true">
+        <label placeholder="Type Here" name="label">Type Here</label>
          </div>
-    <input type="button" onClick="save();" value="save" name="myform">
+    </form>
+    <input type="button" onClick="save();" value="save">
   </body>
 <html>
