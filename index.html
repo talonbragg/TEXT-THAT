@@ -3,6 +3,16 @@
     <title> Text That - A simple text editor</title>
     <link rel="stylesheet" href="http://usewing.ml/dist/wing.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+    <script>
+      function save() 
+{ 
+val = document.myform.text_area.value; 
+mydoc = document.open(); 
+mydoc.write(val); 
+mydoc.execCommand("saveAs",true,".txt"); //.txt file extension
+history.go(-1);
+} 
+    </script>
   </head>
   <body>
     <div style="text-align: center;">
@@ -16,6 +26,7 @@
      </div>   
       <div id="textarea" contenteditable="true">
         <label placeholder="Type Here">Type Here</label>
+        <input type="button" onClick="save();" value="save">
          </div>
   </body>
 <html>
