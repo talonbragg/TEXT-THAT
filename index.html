@@ -3,15 +3,6 @@
     <title> Text That - A simple text editor</title>
     <link rel="stylesheet" href="http://usewing.ml/dist/wing.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
-    <script>
-      var container = document.querySelector('textarea').value;
-      var save = document.querySelector('a');
-
-      save.onclick = function() {
-      save.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(container.value);
-      save.download = 'export.pdf';
-};
-    </script>
   </head>
   <body>
     <div style="text-align: center;">
@@ -26,6 +17,6 @@
     <form name="saveme">  
       <textarea id="textarea" contenteditable="true"></textarea>
     </form>
-    <a type="button" value="save" id="save" href="#">SAVE</a>
+   
   </body>
 <html>
